@@ -1,8 +1,10 @@
 package com.casino.rank.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "Transaction")
 public class TransactionEntity {
     @Id
