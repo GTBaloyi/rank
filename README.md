@@ -20,4 +20,4 @@ ID: **1** <br>
 Username: **admin** <br>
 ---
 #### Thank you - regards,
-#### **Gift Themba Baloyi - gtmbaloyi@gmail.com**
+#### Gift Themba Baloyi - gtmbaloyi@gmail.com
