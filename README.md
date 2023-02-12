@@ -14,9 +14,9 @@ db username **sa**
 db password: **password**
 
 ### Users for testing
-You may use the preloaded data for testing as there was no creating new user requirement.__
-ID: **1**__
-Username: **admin**__
+You may use the preloaded data for testing as there was no creating new user requirement. <br>
+ID: **1** <br>
+Username: **admin** <br>
 ---
 #### Thank you - regards,
 #### **Gift Themba Baloyi - gtmbaloyi@gmail.com**
