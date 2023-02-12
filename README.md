@@ -13,7 +13,7 @@ To access the in memory database you may user the url [http://localhost:8080/h2-
 db username **sa**
 db password: **password**
 
-### Users for testing
+## Users for testing
 
 You may use the preloaded data for testing as there was no creating new user requirement. <br>
 ID: **1** <br>
