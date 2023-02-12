@@ -1,21 +1,47 @@
 package com.casino.rank.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.CreationTimestamp;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "Transaction")
 public class TransactionEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
+    @ManyToOne
+    @JoinColumn(referencedColumnName ="id",name ="playerId")
+    private PlayerEntity playerId;
     private String type;
     private double amount;
+    @CreationTimestamp
+    private Date lastModified;
 
-    public TransactionEntity(int id, String type, double amount) {
-        this.id = id;
+    public PlayerEntity getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(PlayerEntity playerId) {
+        this.playerId = playerId;
+    }
+
+    public void setLastModified(Date lastModified) {
+        this.lastModified = lastModified;
+    }
+
+    public Date getLastModified() {
+        return lastModified;
+    }
+
+    public TransactionEntity(PlayerEntity playerEntity,String type, double amount) {
+        this.playerId = playerEntity;
         this.type = type;
         this.amount = amount;
+    }
+
+    public TransactionEntity() {
     }
 
     public int getId() {

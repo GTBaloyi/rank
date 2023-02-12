@@ -1,6 +1,7 @@
 package com.casino.rank.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,14 +9,17 @@ import javax.persistence.Table;
 @Table(name = "Player")
 public class PlayerEntity {
     @Id
+    @GeneratedValue()
     private int id;
     private String username;
     private double balance;
 
-    public PlayerEntity(int id, String username, double balance) {
-        this.id = id;
+    public PlayerEntity( String username, double balance) {
         this.username = username;
         this.balance = balance;
+    }
+
+    public PlayerEntity() {
     }
 
     public int getId() {
